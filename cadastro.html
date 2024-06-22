@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0D1117;
+            color: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: #161B22;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 350px;
+        }
+        .logo {
+            width: 150px;
+            margin: 0 auto 20px auto;
+            display: block;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        input[type="email"], input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+        .buttons button {
+            background-color: #1F6FEB;
+            border: none;
+            border-radius: 5px;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .buttons button:hover {
+            background-color: #4C8FFB;
+        }
+        .buttons .return {
+            background-color: #2EA043;
+        }
+        .buttons .return:hover {
+            background-color: #3DDC64;
+        }
+        .icon {
+            font-size: 50px;
+            margin: 20px 0;
+            color: #00FFFF;
+        }
+        .show-password {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        .show-password input {
+            margin-right: 5px;
+        }
+        .show-password label {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://fortes.ind.br/wp-content/uploads/2022/08/FORTES_LOGOMARCA_moldura-e1660776738611.png" alt="Logo Fortes" class="logo">
+        <h1>Cadastro instituição</h1>
+        <input type="email" placeholder="Insira seu Email">
+        <input type="email" placeholder="Confirme seu Email">
+        <input type="password" placeholder="Insira uma senha">
+        <input type="password" placeholder="Confirme sua senha">
+        <div class="show-password">
+            <input type="checkbox" id="show-password" onclick="togglePasswordVisibility()">
+            <label for="show-password">Mostrar senha</label>
+        </div>
+        <div class="buttons">
+            <button type="button" class="return" onclick="window.location.href='area_instituicao.html'">Confirmar</button>
+            <button type="button" class="return" onclick="window.location.href='index.html'">Retornar</button>
+        </div>
+    </div>
+    <script>
+        function togglePasswordVisibility() {
+            const passwordFields = document.querySelectorAll('input[type="password"]');
+            passwordFields.forEach(field => {
+                if (field.type === 'password') {
+                    field.type = 'text';
+                } else {
+                    field.type = 'password';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

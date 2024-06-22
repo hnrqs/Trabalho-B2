@@ -1,0 +1,54 @@
+body {
+    background-color: #0D1026;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.project-info {
+    width: 45%;
+}
+
+.project-info h2, .updates h2 {
+    border-bottom: 1px solid #00f0ff;
+    padding-bottom: 5px;
+}
+
+.project-info p {
+    margin: 20px 0;
+}
+
+button {
+    background-color: #00f0ff;
+    border: none;
+    color: #0D1026;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.updates {
+    width: 45%;
+}
+
+.file {
+    background-color: #00f0ff;
+    color: #0D1026;
+    margin: 10px 0;
+    padding: 20px;
+    text-align: center;
+}
